@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psic. Gabriela Cruz Cortés | Bienestar y Salud Mental</title>
+    
+    <!-- Fuentes Elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #5b8a72; /* Verde salvia - transmite calma */
+            --accent: #a4b494; 
+            --dark: #2c3e50;
+            --light: #fdfaf6;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+        /* Navegación */
+        nav {
+            padding: 15px 5%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .nav-links { display: none; } /* En móvil se simplifica */
+
+        /* Hero / Bienvenida */
+        .hero {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #fdfaf6 0%, #e8efee 100%);
+            border-bottom-left-radius: 40px;
+            border-bottom-right-radius: 40px;
+        }
+
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid var(--white);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .hero h1 { font-size: 2.2rem; color: var(--primary); margin-bottom: 10px; }
+        .hero p { font-size: 1.1rem; color: #666; max-width: 600px; margin: 0 auto 30px; }
+
+        /* Botón Principal */
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 8px 15px rgba(91, 138, 114, 0.3);
+        }
+
+        /* Secciones */
+        section { padding: 60px 20px; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .section-title h2 { font-size: 2rem; color: var(--primary); }
+
+        /* Tarjetas de Servicios */
+        .service-card {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary);
+        }
+
+        /* CONTENEDOR DE CALENDLY - LA MAGIA AQUÍ */
+        .booking-box {
+            background: var(--white);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        .whatsapp-float {
+            background: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px auto;
+            max-width: 250px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: #f4f7f6;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.5rem; }
+            section { padding: 80px 10%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">GABRIELA CRUZ CORTÉS</a>
+        <a href="#agendar" style="color: var(--primary); text-decoration: none; font-weight: 600;">Agendar <i class="fas fa-calendar-alt"></i></a>
+    </nav>
+
+    <header class="hero">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Psicóloga Gabriela Cruz">
+        <h1>Tu bienestar empieza hoy</h1>
+        <p>Acompañamiento profesional para ayudarte a superar la ansiedad, el estrés y reencontrar tu equilibrio emocional.</p>
+        <a href="#agendar" class="btn-primary">Reservar una cita</a>
+    </header>
+
+    <section id="sobre-mi">
+        <div class="section-title">
+            <h2>Sobre mi enfoque</h2>
+        </div>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto;">
+            Soy la <strong>Psic. Gabriela Cruz Cortés</strong>. Mi práctica se basa en la escucha activa y herramientas clínicas diseñadas para que cada paciente desarrolle su máximo potencial en un entorno seguro y libre de prejuicios.
+        </p>
+    </section>
+
+    <section id="servicios" style="background-color: #fafafa;">
+        <div class="section-title">
+            <h2>¿Cómo puedo ayudarte?</h2>
+        </div>
+        <div class="service-card">
+            <h3><i class="fas fa-user"></i> Psicoterapia Individual</h3>
+            <p>Tratamiento especializado para adultos y adolescentes.</p>
+        </div>
+        <div class="service-card">
+            <h3><i class="fas fa-video"></i> Sesiones Online</h3>
+            <p>Terapia desde la comodidad de tu hogar, sin traslados.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE AGENDAMIENTO REAL -->
+    <section id="agendar">
+        <div class="section-title">
+            <h2>Agenda tu consulta</h2>
+            <p>Selecciona un espacio disponible en mi calendario oficial:</p>
+        </div>
+
+        <div class="booking-box">
+            <!-- WIDGET INTEGRADO DE CALENDLY -->
+            <div class="calendly-inline-widget" 
+                 data-url="https://calendly.com/gomezpchristian?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=5b8a72" 
+                 style="min-width:320px; height:630px;">
+            </div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px; font-size: 0.9rem;">
+            ¿Tienes alguna duda técnica? Contáctame directamente:
+        </p>
+        <a href="https://wa.me/521234567890" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+        </a>
+    </section>
+
+    <footer>
+        <p>Psicóloga Gabriela Cruz Cortés</p>
+        <p>Atención Presencial y Online</p>
+        <div style="margin-top: 20px; color: var(--primary);">
+            <i class="fab fa-instagram fa-lg" style="margin: 0 10px;"></i>
+            <i class="fab fa-facebook fa-lg" style="margin: 0 10px;"></i>
+            <i class="fab fa-linkedin fa-lg" style="margin: 0 10px;"></i>
+        </div>
+        <p style="margin-top: 20px; font-size: 0.7rem;">&copy; 2023 Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
