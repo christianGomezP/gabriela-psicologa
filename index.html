@@ -6,11 +6,11 @@
     <title>Psic. Gabriela Cruz Cortés | Bienestar y Salud Mental</title>
     
     <!-- Fuentes Elegantes -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- Iconos -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     
-  <style>
+    <style>
         :root {
             --primary: #4a7c64;        /* Verde salvia profundo */
             --accent-warm: #c87d55;    /* Terracota / Ámbar cálido */
@@ -56,52 +56,37 @@
             letter-spacing: 0.5px;
         }
 
-        .nav-btn {
-            background: var(--primary);
-            color: var(--white);
-            padding: 9px 20px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .nav-btn:hover {
-            background: #3c6551;
-            transform: translateY(-2px);
-        }
-
-        /* Banner Hero */
+        /* Hero */
         .hero {
-            padding: 70px 20px 50px;
+            padding: 60px 20px 50px;
             text-align: center;
             background: radial-gradient(circle at top right, #f4eee6 0%, #fbf8f3 70%);
             border-bottom-left-radius: 40px;
             border-bottom-right-radius: 40px;
         }
 
+        .hero img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 4px solid var(--white);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
         .hero h1 { 
-            font-size: 2.6rem; 
+            font-size: 2.4rem; 
             color: var(--primary); 
-            margin-bottom: 15px; 
+            margin-bottom: 12px; 
             line-height: 1.2;
         }
 
         .hero p { 
-            font-size: 1.1rem; 
+            font-size: 1.05rem; 
             color: var(--text-muted); 
             max-width: 650px; 
-            margin: 0 auto 10px; 
-        }
-
-        .hero-tagline {
-            font-style: italic;
-            font-family: 'Playfair Display', serif;
-            color: var(--accent-warm) !important;
-            font-size: 1.2rem !important;
-            margin-top: 15px !important;
-            margin-bottom: 25px !important;
+            margin: 0 auto 8px; 
         }
 
         .btn-primary {
@@ -112,7 +97,8 @@
             text-decoration: none;
             display: inline-block;
             font-weight: 600;
-            transition: 0.3s;
+            margin-top: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             box-shadow: 0 8px 20px rgba(200, 125, 85, 0.35);
         }
 
@@ -121,112 +107,51 @@
             box-shadow: 0 12px 25px rgba(200, 125, 85, 0.45);
         }
 
-        /* Sección Servicios Inspirada en la Maqueta */
-        .services-section {
-            padding: 70px 6%;
-            position: relative;
-            background: linear-gradient(180deg, #fbf8f3 0%, #f4ede4 100%);
-            overflow: hidden;
+        /* Secciones Generales */
+        section {
+            padding: 60px 20px;
         }
 
-        /* Ilustración de hojas decorativas en fondo */
-        .services-section::before,
-        .services-section::after {
-            content: "🌿";
-            font-size: 6rem;
-            position: absolute;
-            opacity: 0.12;
-            pointer-events: none;
-        }
-        .services-section::before { top: 20px; right: 30px; transform: rotate(45deg); }
-        .services-section::after { bottom: 20px; left: 20px; transform: rotate(-30deg); }
-
-        .section-header {
+        .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
         }
 
-        .section-header h2 {
-            font-size: 2.4rem;
+        .section-title h2 {
+            font-size: 2.2rem;
             color: var(--primary);
-            position: relative;
-            display: inline-block;
         }
 
-        /* Layout dividido: Psicóloga a un lado + tarjetas al otro */
-        .showcase-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-        }
-
-        .therapist-badge {
-            flex: 1 1 320px;
-            max-width: 360px;
-            text-align: center;
-            background: #ffffff;
-            padding: 30px 25px;
-            border-radius: 28px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
-            border: 1px solid rgba(200, 125, 85, 0.2);
-        }
-
-        .therapist-badge img {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #fff;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-            margin-bottom: 18px;
-        }
-
-        .therapist-badge h3 {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 6px;
-        }
-
-        .therapist-badge span {
-            color: var(--accent-warm);
-            font-weight: 500;
-            font-size: 0.95rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        /* Cuadrícula de tarjetas */
+        /* Cuadrícula de Tarjetas Centrada y Responsiva */
         .cards-cluster {
-            flex: 2 1 600px;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 320px));
+            gap: 25px;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
         .service-card {
             background: #ffffff;
             border-radius: 24px;
-            padding: 30px 22px 25px;
+            padding: 35px 25px 30px;
             text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            min-height: 340px;
+            min-height: 350px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            transition: all 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-6px);
             box-shadow: 0 18px 40px rgba(0,0,0,0.1);
         }
 
-        /* Variantes de color en bordes e íconos (como en la maqueta) */
+        /* Estilos diferenciados por tarjeta */
         .card-gold {
             border: 2px solid var(--accent-gold);
         }
@@ -268,44 +193,40 @@
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
-            margin-bottom: 18px;
+            margin-bottom: 20px;
         }
 
         .service-card h3 {
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             color: var(--dark);
             margin-bottom: 12px;
             line-height: 1.3;
         }
 
         .service-card p {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #666;
-            margin-bottom: 22px;
+            margin-bottom: 25px;
             flex-grow: 1;
         }
 
         .btn-card {
             color: #ffffff;
-            padding: 9px 24px;
+            padding: 10px 28px;
             border-radius: 30px;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-            transition: opacity 0.2s ease;
+            transition: opacity 0.2s ease, transform 0.2s ease;
         }
 
         .btn-card:hover {
-            opacity: 0.9;
+            opacity: 0.92;
+            transform: translateY(-2px);
         }
 
         /* Sección Agenda */
-        #agendar {
-            padding: 70px 20px;
-            text-align: center;
-        }
-
         .booking-box {
             background: var(--white);
             border-radius: 28px;
@@ -322,12 +243,14 @@
             padding: 13px 25px;
             border-radius: 30px;
             text-decoration: none;
-            display: inline-flex;
+            display: flex;
             align-items: center;
+            justify-content: center;
             gap: 10px;
             font-weight: 600;
             box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-            margin-top: 20px;
+            margin: 20px auto 0;
+            max-width: 250px;
             transition: transform 0.3s;
         }
 
@@ -335,7 +258,7 @@
             transform: scale(1.05);
         }
 
-        /* Footer cálido */
+        /* Footer */
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -345,14 +268,10 @@
             border-top: 3px solid var(--accent-warm);
         }
 
-        footer .socials {
-            margin-top: 15px;
-        }
-
         footer .socials a {
             color: var(--primary);
-            font-size: 1.3rem;
             margin: 0 10px;
+            text-decoration: none;
             transition: color 0.2s;
         }
 
@@ -360,11 +279,9 @@
             color: var(--accent-warm);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.1rem; }
-            .section-header h2 { font-size: 1.9rem; }
-            .showcase-container { flex-direction: column; }
-            .therapist-badge { max-width: 100%; }
+        @media (min-width: 768px) {
+            .hero h1 { font-size: 3.2rem; }
+            section { padding: 75px 10%; }
         }
     </style>
 </head>
@@ -376,7 +293,7 @@
     </nav>
 
     <header class="hero">
-       <img src="gaby.jpg" alt="Psicóloga Gabriela Cruz">
+        <img src="gaby.jpg" alt="Psicóloga Gabriela Cruz">
         <h1>Tu bienestar empieza hoy</h1>
         <p>Psicología clínica | Salud mental</p>
         <p>Acompañamiento profesional; traumas, vínculos y reflexiones de vida</p>
@@ -393,44 +310,44 @@
         </p>
     </section>
 
-   <section id="servicios" style="background-color: #f6f8f7;">
-    <div class="section-title">
-        <h2>¿Cómo puedo ayudar a tu bienestar?</h2>
-    </div>
+    <section id="servicios" style="background-color: #f6f8f7;">
+        <div class="section-title">
+            <h2>¿Cómo puedo ayudar a tu bienestar?</h2>
+        </div>
 
-            <!-- Cluster de 3 Tarjetas con bordes diferenciados -->
-            <div class="cards-cluster">
-                <!-- Tarjeta 1: Acento Dorado -->
-                <div class="service-card card-gold">
-                    <div class="icon-circle">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h3>Psicoterapia Individual</h3>
-                    <p>Tratamiento especializado y reflexivo para adolescentes y adultos.</p>
-                    <a href="#agendar" class="btn-card">Saber más</a>
+        <!-- Cluster de 3 Tarjetas con bordes diferenciados -->
+        <div class="cards-cluster">
+            <!-- Tarjeta 1: Acento Dorado -->
+            <div class="service-card card-gold">
+                <div class="icon-circle">
+                    <i class="fas fa-user-friends"></i>
                 </div>
-
-                <!-- Tarjeta 2: Acento Verde Bosque -->
-                <div class="service-card card-green">
-                    <div class="icon-circle">
-                        <i class="fas fa-seedling"></i>
-                    </div>
-                    <h3>Psicoterapia en Adicciones</h3>
-                    <p>Acompañamiento clínico integral para procesos de recuperación y estabilidad.</p>
-                    <a href="#agendar" class="btn-card">Saber más</a>
-                </div>
-
-                <!-- Tarjeta 3: Acento Terracota -->
-                <div class="service-card card-terracota">
-                    <div class="icon-circle">
-                        <i class="fas fa-laptop-medical"></i>
-                    </div>
-                    <h3>Sesiones Online</h3>
-                    <p>Atención cercana y confidencial desde cualquier lugar, sin traslados.</p>
-                    <a href="#agendar" class="btn-card">Saber más</a>
-                </div>
+                <h3>Psicoterapia Individual</h3>
+                <p>Tratamiento especializado y reflexivo para adolescentes y adultos.</p>
+                <a href="#agendar" class="btn-card">Saber más</a>
             </div>
-</section>
+
+            <!-- Tarjeta 2: Acento Verde Bosque -->
+            <div class="service-card card-green">
+                <div class="icon-circle">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Psicoterapia en Adicciones</h3>
+                <p>Acompañamiento clínico integral para procesos de recuperación y estabilidad.</p>
+                <a href="#agendar" class="btn-card">Saber más</a>
+            </div>
+
+            <!-- Tarjeta 3: Acento Terracota -->
+            <div class="service-card card-terracota">
+                <div class="icon-circle">
+                    <i class="fas fa-laptop-medical"></i>
+                </div>
+                <h3>Sesiones Online</h3>
+                <p>Atención cercana y confidencial desde cualquier lugar, sin traslados.</p>
+                <a href="#agendar" class="btn-card">Saber más</a>
+            </div>
+        </div>
+    </section>
 
     <!-- SECCIÓN DE AGENDAMIENTO REAL -->
     <section id="agendar">
@@ -459,12 +376,12 @@
     <footer>
         <p>Psicóloga Gabriela Cruz Cortés</p>
         <p>Atención Presencial y Online</p>
-        <div style="margin-top: 20px; color: var(--primary);">
-            <i class="fab fa-instagram fa-lg" style="margin: 0 10px;"></i>
-            <i class="fab fa-facebook fa-lg" style="margin: 0 10px;"></i>
-            <i class="fab fa-linkedin fa-lg" style="margin: 0 10px;"></i>
+        <div class="socials" style="margin-top: 20px;">
+            <a href="#"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-lg"></i></a>
         </div>
-        <p style="margin-top: 20px; font-size: 0.7rem;">&copy; 2026 Todos los derechos reservados.</p>
+        <p style="margin-top: 20px; font-size: 0.7rem;">&copy; Todos los derechos reservados.</p>
     </footer>
 
 </body>
