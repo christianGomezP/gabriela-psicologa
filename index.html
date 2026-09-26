@@ -102,6 +102,55 @@
             margin-bottom: 20px;
             /*border-left: 5px solid var(--primary);*/
         }
+        /* Contenedor en cuadrícula para que en PC se vean una al lado de otra */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tarjeta mejorada con sombra, contraste y animación suave */
+.service-card {
+    background: #ffffff;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(91, 138, 114, 0.12);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(91, 138, 114, 0.15);
+}
+
+/* Ícono circular arriba del texto */
+.service-card .icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: #eef4f0;
+    color: var(--primary);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+}
 
         /* CONTENEDOR DE CALENDLY - LA MAGIA AQUÍ */
         .booking-box {
@@ -166,26 +215,37 @@
         </p>
     </section>
 
-    <section id="servicios" style="background-color: #fafafa;">
-        <div class="section-title">
-            <h2>¿Cómo puedo ayudar a tu bienestar?</h2>
-        </div>
-         <center>
+   <section id="servicios" style="background-color: #f6f8f7;">
+    <div class="section-title">
+        <h2>¿Cómo puedo ayudar a tu bienestar?</h2>
+    </div>
+
+    <div class="services-grid">
         <div class="service-card">
-            <h3><i class="fas fa-user"></i> Psicoterapia Individual</h3>
+            <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+            </div>
+            <h3>Psicoterapia Individual</h3>
             <p>Tratamiento especializado para adultos y adolescentes.</p>
-            
         </div>
+
         <div class="service-card">
-            <h3><i class="fas fa-user"></i> Psicoterapia en adicciones</h3>
-            <p>Tratamiento especializado para adultos y adolescentes.</p>
+            <div class="icon-wrapper">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h3>Psicoterapia en adicciones</h3>
+            <p>Acompañamiento especializado para el proceso de recuperación y estabilidad.</p>
         </div>
+
         <div class="service-card">
-            <h3><i class="fas fa-video"></i> Sesiones Online</h3>
+            <div class="icon-wrapper">
+                <i class="fas fa-video"></i>
+            </div>
+            <h3>Sesiones Online</h3>
             <p>Terapia desde la comodidad de tu hogar, sin traslados.</p>
         </div>
-        </center>
-    </section>
+    </div>
+</section>
 
     <!-- SECCIÓN DE AGENDAMIENTO REAL -->
     <section id="agendar">
